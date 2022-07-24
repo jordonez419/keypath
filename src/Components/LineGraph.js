@@ -6,21 +6,6 @@ ChartJS.register(
   CategoryScale, LinearScale, PointElement, Filler
 )
 
-// const defaultData = {
-//   labels: [0, `Total Revenue: 0`, 30000],
-//   datasets: [
-//     {
-//       label: 'Product Quantity',
-//       data: [1000, 0, 10000],
-//       tension: 0.4,
-//       pointStyle: 'rect',
-//       pointBorderColor: 'blue',
-//       pointBackgroundColor: '#fff',
-//       showLine: true
-//     }
-//   ]
-// }
-
 function LineGraph(props) {
   const { data } = props
   return (

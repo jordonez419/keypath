@@ -10,6 +10,7 @@ const Home = (props) => {
     const [totalRevenue, setTotalRevenue] = useState(0)
     const [quantity, setQuantity] = useState(0)
     const [products, setProducts] = useState([])
+    const [error, setError] = useState('')
     const navigate = useNavigate()
     const navToPrevious = () => {
         navigate('/learn/2')
@@ -19,21 +20,22 @@ const Home = (props) => {
     }
     // const { products } = props
     useEffect(() => {
-        axios.get('https://fakestoreapi.com/products?limit=5')
-            .then(res => setProducts(res.data))
-            .catch(err => console.log(err))
         setData({
             ...data,
-            labels: [0, `Total Revenue: $${totalRevenue}`, 30000],
+            labels: quantity == 0 ? '' : [0, `Total Revenue: $${totalRevenue}`, 30000],
             datasets: [
                 {
                     label: `Products Sold: ${quantity}`,
                     data: [1000, `${quantity}`, 10000],
-                    tension: 0.4,
-                    pointStyle: 'rect',
+                    tension: 0.1,
+                    pointStyle: 'circle',
+                    borderColor: 'black',
                     pointBorderColor: 'blue',
-                    pointBackgroundColor: '#fff',
-                    showLine: true
+                    pointBackgroundColor: 'blue',
+                    pointBorderWidth: 5,
+                    showLine: true,
+                    // backgroundColor: 'blue',
+                    fill: false
                 }
             ]
 
@@ -81,36 +83,26 @@ const Home = (props) => {
                 break;
             }
         }
+        if (!price) {
+            setError('Please Select a Product')
+        } else {
+            setError('')
+            consumption = price * Mdemand + Bdemand;
+            supply = price * Msupply + Bsupply;
 
-        consumption = price * Mdemand + Bdemand;
-        supply = price * Msupply + Bsupply;
+            revenue = consumption * price;
+            setTotalRevenue(revenue)
+            setQuantity(consumption)
+        }
 
-        // if (consumption > supply) {
-        //     consumption = supply;
-        //     message = "ABC Company canot make enough XYZ Widgets";
-        // }
-
-        // if (consumption <= 0) {
-        //     consumption = 0;
-        //     message = "No one will buy XYZ Widgets at this price";
-        // }
-
-        // /*
-        // if (maxRevenue) {
-        //     message = "This is the equilibrium price"
-        // }
-        // */
-
-        revenue = consumption * price;
-        setTotalRevenue(revenue)
-        setQuantity(consumption)
     }
     return (
-        <div className="react-transition swipe-right">
+        // <div className="react-transition swipe-right">
+        <div>
             <Container >
                 {/* <h1>Equilibrium Price</h1> */}
                 <div id="intro">
-                    <h1 className='title'>Interactive Equilibrium Tool</h1>
+                    <h1 className='title'>Equilibrium Tool</h1>
                     <p>
                         Select your favorite snack and see its current Equilibrium Price!
                     </p>
@@ -157,15 +149,15 @@ const Home = (props) => {
                                 </label>
                             </div>
                         </div>
-
-                        <input id="calculate" type="button" value="Calculate" onClick={() => calculateOutput()} />
+                        {error ? <p className='error'>{error}</p> : ''}
+                        <input className='button' id="calculate" type="button" value="Calculate" onClick={() => calculateOutput()} />
                     </form>
                 </div>
 
                 <LineGraph data={data} />
 
                 <button onClick={() => navToPrevious()}>Previous</button>
-                {/* <button onClick={() => navToQuiz()}>Take a Quiz!</button> */}
+                <button onClick={() => navToQuiz()}>Quiz</button>
             </Container>
 
 
@@ -179,6 +171,7 @@ width:50rem;
 border: 1px solid black;
 border-radius:5px;
 padding:2rem;
-background-color: rgb(198, 207, 213, .8)
+// background-color: rgb(240, 245, 245)
+background-color: #eceff1
 `
 

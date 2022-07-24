@@ -13,8 +13,8 @@ function Learn3() {
         navigate('/learn/1')
     }
     const opts = {
-        height: '390',
-        width: '640',
+        height: '410',
+        width: '660',
         playerVars: {
             // https://developers.google.com/youtube/player_parameters
             autoplay: 0,
@@ -22,7 +22,8 @@ function Learn3() {
     };
 
     return (
-        <div className="react-transition swipe-right">
+        // <div className="react-transition swipe-right">
+        <div>
 
             <Container>
                 <h1 className="title">Check out this video!</h1>
@@ -39,9 +40,10 @@ export default Learn3;
 const Container = styled.div`
 margin-top: 1rem;
 margin-bottom:1rem;
-background-color:grey;
+background-color:#eceff1;
+color:#3b3a30;
 border: 1px solid black;
 border-radius:5px;
-padding:5rem;
+padding:4rem;
 width:50rem;
 `

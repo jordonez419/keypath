@@ -13,18 +13,19 @@ function Learn2() {
     }
 
     return (
-        <div className="react-transition swipe-right">
+        // <div className="react-transition swipe-right">
+        <div>
             <Container>
-                <h1 className="title">Calculating Equilibrium Price:</h1>
+                <h1 className="title">Calculating Equilibrium Price</h1>
                 <div className="eq-example">
                     <div className="eq-item">
-                        <h2 className="title">Variables</h2>
+                        {/* <h2 className="title">Variables</h2> */}
                         <p>Qs stands for quantity supplied</p>
                         <p>Qd stands for quantity demanded</p>
                         <p>P stands for price</p>
 
                     </div>
-                    <h2 className="title">Equations</h2>
+                    {/* <h2 className="title">Equations</h2> */}
                     <div className="eq-item">
                         <p>Qs = 128 + 8P  </p>
                         <p>Qd = 478 - 6P  </p>
@@ -58,9 +59,9 @@ export default Learn2;
 const Container = styled.div`
 margin-top: 1rem;
 margin-bottom:1rem;
-background-color:grey;
+background-color:#eceff1;
 border: 1px solid black;
 border-radius:5px;
-padding:5rem;
+padding:4rem;
 width:50rem;
 `
