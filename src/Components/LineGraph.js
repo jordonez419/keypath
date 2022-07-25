@@ -9,7 +9,7 @@ ChartJS.register(
 function LineGraph(props) {
   const { data } = props
   return (
-    <div className="result" style={{ width: '45rem', height: '25rem' }}>
+    <div className="line-chart" style={{ width: '100%', height: '100%' }}>
       <Line data={data}></Line>
     </div>
   );

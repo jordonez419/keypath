@@ -21,7 +21,7 @@ const Home = (props) => {
     useEffect(() => {
         setData({
             ...data,
-            labels: quantity == 0 ? '' : [0, `Total Revenue: $${totalRevenue}`, 30000],
+            labels: quantity == 0 ? '' : [0, ``, 30000],
             datasets: [
                 {
                     label: `Products Sold: ${quantity}`,
@@ -44,7 +44,7 @@ const Home = (props) => {
 
 
     const defaultData = {
-        labels: [0, `Total Revenue: 0`, 30000],
+        labels: [0, ``, 30000],
         datasets: [
             {
                 label: 'Product Quantity',
@@ -98,7 +98,7 @@ const Home = (props) => {
     return (
         // <div className="react-transition swipe-right">
         <div>
-            <Container >
+            <Container className='widget-container'>
                 {/* <h1>Equilibrium Price</h1> */}
                 <div id="intro">
                     <h1 className='title'>Equilibrium Tool</h1>
@@ -154,6 +154,7 @@ const Home = (props) => {
                 </div>
 
                 <LineGraph data={data} />
+                <p>{totalRevenue <= 0 ? '' : `Total Revenue: $${totalRevenue}`}</p>
 
                 <button className='center' onClick={() => navToPrevious()}>Back</button>
                 <button onClick={() => navToQuiz()}>Quiz</button>
@@ -165,12 +166,9 @@ const Home = (props) => {
 }
 export default Home
 const Container = styled.div`
-width:50rem;
-// background-color:grey;
 border: 5px solid black;
 border-radius:10px;
 padding:2rem;
-// background-color: rgb(240, 245, 245)
 background-color: #eceff1
 `
 

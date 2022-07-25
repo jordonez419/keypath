@@ -9,7 +9,7 @@ function Results() {
     }
     return (
         <div>
-            <Container>
+            <Container >
                 <h1 className="title">Results</h1>
                 <div className='question'>
                     <p>1.What is the Equilibrium Price of the given supply and demand?</p>

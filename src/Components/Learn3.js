@@ -13,8 +13,8 @@ function Learn3() {
         navigate('/learn/1')
     }
     const opts = {
-        height: '410',
-        width: '660',
+        height: '390',
+        width: '100%',
         playerVars: {
             // https://developers.google.com/youtube/player_parameters
             autoplay: 0,
@@ -25,7 +25,7 @@ function Learn3() {
         // <div className="react-transition swipe-right">
         <div>
 
-            <Container>
+            <Container className='responsiveness-container-3'>
                 <h1 className="title">Learn More!</h1>
                 <YouTube videoId="67DQlzX32oA" opts={opts} />
                 {/* <img src={`${process.env.PUBLIC_URL}/assets/images/graph.png`} alt='graph' /> */}
@@ -45,5 +45,5 @@ color:#3b3a30;
 border: 5px solid black;
 border-radius:10px;
 padding:4rem;
-width:50rem;
+// width:50rem;
 `

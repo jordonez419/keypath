@@ -703,6 +703,7 @@ p {
 }
 
 /* Multiple Choice Styling Below*/
+
 .question-card {
   /* Center the div  */
   margin: 0 auto;
@@ -777,4 +778,227 @@ li:hover {
   color: black;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.responsiveness-container-2 {
+  max-width: 25rem;
+  /* height: 42rem; */
+}
+
+
+/* Responsiveness */
+.widget-container {
+  width: 50rem;
+}
+
+.responsiveness-container-1 {
+  width: 50rem;
+  height: 42rem;
+}
+
+.responsiveness-container-3 {
+  width: 50rem;
+  height: 30rem;
+}
+
+/* .youtube {
+  width: 50rem;
+} */
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .youtube {
+    width: 10rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .graph {
+    display: none;
+  }
+
+  .snack-img {
+    width: 5.5rem;
+  }
+
+  #reeses {
+    width: 5rem;
+  }
+
+  .responsiveness-container-1 {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .responsiveness-container-2 {
+    width: 30rem;
+  }
+
+  .responsiveness-container-3 {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .responsiveness-container-4 {
+    width: 40rem;
+    height: 30rem;
+  }
+
+  .widget-container {
+    width: 40rem;
+  }
+
+}
+
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .graph {
+    display: none;
+  }
+
+  .snack-img {
+    width: 3rem;
+  }
+
+  #reeses {
+    width: 3.5rem;
+  }
+
+  .responsiveness-container-1 {
+    width: 17rem;
+    height: 35rem;
+  }
+
+  .responsiveness-container-2 {
+    width: 17rem;
+    height: 50rem;
+  }
+
+  .responsiveness-container-3 {
+    width: 20rem;
+    height: 30rem;
+  }
+
+  .responsiveness-container-4 {
+    width: 20rem;
+    height: 30rem;
+  }
+
+  .widget-container {
+    width: 25rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+  .graph {
+    display: none;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .snack-img {
+    width: 2.5rem;
+  }
+
+  #reeses {
+    width: 2.5rem;
+  }
+
+
+  .responsiveness-container-1 {
+    width: 10rem;
+    height: 60rem;
+  }
+
+  .responsiveness-container-2 {
+    width: 15rem;
+  }
+
+  .responsiveness-container-3 {
+    width: 15rem;
+    height: 28rem;
+  }
+
+  .responsiveness-container-4 {
+    width: 15rem;
+    height: 28rem;
+  }
+
+  .widget-container {
+    width: 20rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 399px) {
+  .graph {
+    display: none;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+
+  .snack-img {
+    width: 3rem;
+  }
+
+  #reeses {
+    width: 3rem;
+  }
+
+
+  .responsiveness-container-1 {
+    width: 8rem;
+    height: 70rem;
+  }
+
+  .responsiveness-container-2 {
+    width: 10rem;
+  }
+
+  .responsiveness-container-3 {
+    width: 12rem;
+    height: 31rem;
+  }
+
+  .responsiveness-container-4 {
+    width: 12rem;
+    height: 28rem;
+  }
+
+
+  .widget-container {
+    width: 15rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
 }
