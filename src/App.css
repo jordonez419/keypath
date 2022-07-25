@@ -221,6 +221,10 @@ p {
   margin-top: .5rem;
 }
 
+li:hover {
+  cursor: pointer;
+}
+
 .title {
   font-size: 1.5rem;
   margin: auto;
@@ -303,6 +307,16 @@ p {
 
 .graph {
   margin: 1rem;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.center {
+  margin: auto;
+}
+
+.margin-top {
+  margin-top: 2rem;
 }
 
 /* Transitions Below */
@@ -313,6 +327,21 @@ p {
 
 .react-transition {
   animation-fill-mode: both;
+}
+
+.multiple-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.question {
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 @keyframes swipeUp {
@@ -671,4 +700,81 @@ p {
   animation-name: woah;
   animation-duration: 1s;
   transform-style: preserve-3d;
+}
+
+/* Multiple Choice Styling Below*/
+.question-card {
+  /* Center the div  */
+  margin: 0 auto;
+
+  /* Dimensions  */
+  width: 80%;
+  /* Can be in percentage also. */
+  height: auto;
+
+  /* Visual  */
+  background-color: #80ced6;
+  padding: 16px;
+  border-radius: 16px;
+  border: 3px solid black;
+  color: black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-top: 8px;
+  background-color: #d5e1df;
+  padding: 16px;
+  border: 3px solid black;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+li:hover {
+  transition: .3s;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+#quiz-btn {
+  background-color: #d5e1df;
+  color: black;
+}
+
+#quiz-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.question-text {
+  color: black;
+  font-size: 24px;
+}
+
+/* Final Results  */
+
+.final-results {
+  /* Center the div  */
+  margin: 0 auto;
+
+  /* Dimensions  */
+  width: 50%;
+  /* Can be in percentage also. */
+  height: auto;
+  margin-top: 64px;
+
+  /* Visual  */
+  background-color: #80ced6;
+  padding: 16px;
+  border-radius: 16px;
+  border: 3px solid black;
+  color: black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }

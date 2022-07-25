@@ -5,8 +5,7 @@ import Learn from './Components/Learn';
 import Learn2 from './Components/Learn2';
 import Learn3 from './Components/Learn3';
 import Quiz from './Components/Quiz';
-import UncontrolledExample from './Components/Carousel';
-import SlideView from './Components/SlideView';
+import Results from './Components/Results';
 
 
 
@@ -23,6 +22,7 @@ function App() {
           <Route exact path='/learn/2' element={<Learn3 />}></Route>
           <Route exact path='/widget' element={<Home />}></Route>
           <Route exact path='/quiz' element={<Quiz />}></Route>
+          <Route exact path='/results' element={<Results />}></Route>
         </Routes>
         {/* <UncontrolledExample /> */}
         {/* <SlideView /> */}

@@ -2,7 +2,6 @@ import react, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import LineGraph from './LineGraph';
-import axios from 'axios'
 import '../App.css';
 
 
@@ -117,35 +116,35 @@ const Home = (props) => {
                             <div className='flex-container'>
                                 <img src={`${process.env.PUBLIC_URL}/assets/images/arizona.png`} alt='arizona tea' className='snack-img' />
                                 <label className='item-option'>
-                                    <input type="radio" name="price" value={1} />$1
+                                    <input type="radio" name="price" value={.99} />¢99
                                 </label>
                             </div>
 
                             <div className='flex-container'>
                                 <img src={`${process.env.PUBLIC_URL}/assets/images/nerds.png`} alt='nerds snack' className='snack-img' />
                                 <label className='item-option'>
-                                    <input type="radio" name="price" value={3} />$3
+                                    <input type="radio" name="price" value={1.99} />$1.99
                                 </label>
                             </div>
 
                             <div className='flex-container'>
                                 <img id='reeses' src={`${process.env.PUBLIC_URL}/assets/images/reeses.png`} alt='reeses cups' className='snack-img' />
                                 <label className='item-option'>
-                                    <input type="radio" name="price" value={4} />$4
+                                    <input type="radio" name="price" value={3.99} />$3.99
                                 </label>
                             </div>
 
                             <div className='flex-container' id='snickers'>
                                 <img src={`${process.env.PUBLIC_URL}/assets/images/snickers.png`} alt='snickers bar' className='snack-img' />
                                 <label className='item-option'>
-                                    <input type="radio" name="price" value={5} />$5
+                                    <input type="radio" name="price" value={4.99} />$4.99
                                 </label>
                             </div>
 
                             <div className='flex-container' id='jack'>
                                 <img src={`${process.env.PUBLIC_URL}/assets/images/jacklink.png`} alt='Jack Links beef Jerky' className='snack-img' />
                                 <label className='item-option'>
-                                    <input type="radio" name="price" value={8} />$8
+                                    <input type="radio" name="price" value={7.99} />$7.99
                                 </label>
                             </div>
                         </div>
@@ -156,7 +155,7 @@ const Home = (props) => {
 
                 <LineGraph data={data} />
 
-                <button onClick={() => navToPrevious()}>Previous</button>
+                <button className='center' onClick={() => navToPrevious()}>Back</button>
                 <button onClick={() => navToQuiz()}>Quiz</button>
             </Container>
 
@@ -168,8 +167,8 @@ export default Home
 const Container = styled.div`
 width:50rem;
 // background-color:grey;
-border: 1px solid black;
-border-radius:5px;
+border: 5px solid black;
+border-radius:10px;
 padding:2rem;
 // background-color: rgb(240, 245, 245)
 background-color: #eceff1

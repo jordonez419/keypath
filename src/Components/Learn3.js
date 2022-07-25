@@ -26,10 +26,10 @@ function Learn3() {
         <div>
 
             <Container>
-                <h1 className="title">Check out this video!</h1>
+                <h1 className="title">Learn More!</h1>
                 <YouTube videoId="67DQlzX32oA" opts={opts} />
                 {/* <img src={`${process.env.PUBLIC_URL}/assets/images/graph.png`} alt='graph' /> */}
-                <button onClick={() => navToPrevious()}>Previous</button>
+                <button onClick={() => navToPrevious()}>Back</button>
                 <button onClick={() => navToNext()}>Next</button>
             </Container>
         </div>
@@ -42,8 +42,8 @@ margin-top: 1rem;
 margin-bottom:1rem;
 background-color:#eceff1;
 color:#3b3a30;
-border: 1px solid black;
-border-radius:5px;
+border: 5px solid black;
+border-radius:10px;
 padding:4rem;
 width:50rem;
 `

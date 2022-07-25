@@ -44,12 +44,14 @@ function Learn2() {
                         <p>14P=350</p>
                         <p>P=$25</p>
                     </div>
-                    <p>At the price of $25, the supply and demand curves will intersect. Therefore the equilibrium price is $25!</p>
+                    <p>At the price of $25, the supply and demand curves will intersect. Therefore, the equilibrium price is $25!</p>
                 </div>
 
                 {/* <img src={`${process.env.PUBLIC_URL}/assets/images/equilibrium-price.jpg`} alt='graph' /> */}
-                <button onClick={() => navToPrevious()}>Previous</button>
-                <button onClick={() => navToNext()}>Next</button>
+
+                <button className='margin-bottom' onClick={() => navToPrevious()}>Back</button>
+                <button className='margin-bottom' onClick={() => navToNext()}>Next</button>
+
             </Container>
         </div>
     )
@@ -60,8 +62,9 @@ const Container = styled.div`
 margin-top: 1rem;
 margin-bottom:1rem;
 background-color:#eceff1;
-border: 1px solid black;
-border-radius:5px;
+border: 5px solid black;
+border-radius:10px;
 padding:4rem;
-width:50rem;
+max-width:50rem;
+height:42rem;
 `
