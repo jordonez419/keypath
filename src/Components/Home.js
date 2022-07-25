@@ -102,7 +102,7 @@ const Home = (props) => {
                 {/* <h1>Equilibrium Price</h1> */}
                 <div id="intro">
                     <h1 className='title'>Equilibrium Tool</h1>
-                    <p>
+                    <p className='text'>
                         Select your favorite snack and see its current Equilibrium Price!
                     </p>
                 </div>
@@ -148,13 +148,13 @@ const Home = (props) => {
                                 </label>
                             </div>
                         </div>
-                        {error ? <p className='error'>{error}</p> : ''}
+                        {error ? <p className='error text'>{error}</p> : ''}
                         <input className='button' id="calculate" type="button" value="Calculate" onClick={() => calculateOutput()} />
                     </form>
                 </div>
 
                 <LineGraph data={data} />
-                <p>{totalRevenue <= 0 ? '' : `Total Revenue: $${totalRevenue}`}</p>
+                <p className='text'>{totalRevenue <= 0 ? '' : `Total Revenue: $${totalRevenue}`}</p>
 
                 <button className='center' onClick={() => navToPrevious()}>Back</button>
                 <button onClick={() => navToQuiz()}>Quiz</button>
