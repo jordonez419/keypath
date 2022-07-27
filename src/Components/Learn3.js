@@ -16,13 +16,11 @@ function Learn3() {
         height: '390',
         width: '100%',
         playerVars: {
-            // https://developers.google.com/youtube/player_parameters
             autoplay: 0,
         },
     };
 
     return (
-        // <div className="react-transition swipe-right">
         <div>
 
             <Container className='responsiveness-container-3'>
@@ -45,5 +43,4 @@ color:#3b3a30;
 border: 5px solid black;
 border-radius:10px;
 padding:4rem;
-// width:50rem;
 `

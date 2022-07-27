@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom'
-import YouTube from 'react-youtube';
 import styled from 'styled-components'
 
 
@@ -9,18 +8,8 @@ function Learn() {
     const navToNext = () => {
         navigate('/learn/1')
     }
-    const opts = {
-        height: '390',
-        width: '640',
-        playerVars: {
-            // https://developers.google.com/youtube/player_parameters
-            autoplay: 0,
-        },
-    };
-
     return (
         <div>
-            {/* <div> */}
 
             <Container className='responsiveness-container-1'>
 
@@ -52,6 +41,4 @@ background-color:#eceff1;
 border: 5px solid black;
 border-radius:10px;
 padding:4rem;
-// width:50rem;
-// height:42rem;
 `

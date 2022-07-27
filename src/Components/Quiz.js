@@ -42,6 +42,7 @@ function Quiz() {
             ],
         }
     ];
+
     // Helper Functions
 
     /* A possible answer was clicked */
@@ -58,16 +59,14 @@ function Quiz() {
         }
     };
 
-    /* Resets the game back to default */
-    const restartGame = () => {
+    /* Resets the quiz back to default */
+    const restartQuiz = () => {
         setScore(0);
         setCurrentQuestion(0);
         setShowResults(false);
     };
     const navigate = useNavigate()
-    const navToResults = () => {
-        navigate('/results')
-    }
+
     const navToPrevious = () => {
         navigate('/widget')
     }
@@ -77,18 +76,17 @@ function Quiz() {
             <Container className='responsiveness-container-4'>
                 <h1 className="title"> Quiz</h1>
                 {showResults ? (
-                    /* 4. Final Results */
+                    //Final Results displayed
                     <div className="final-results">
                         <h1>Final Results</h1>
                         <h2>
                             {score} out of {questions.length} correct - (
                             {(score / questions.length) * 100}%)
                         </h2>
-                        {/* <button id='quiz-btn' onClick={() => navToPrevious()}>Back</button> */}
-                        <button id='quiz-btn' onClick={() => restartGame()}>Restart</button>
+                        <button id='quiz-btn' onClick={() => restartQuiz()}>Restart</button>
                     </div>
                 ) : (
-                    /* 5. Question Card  */
+                    //Question Card
                     <div className="question-card">
                         {/* Current Question  */}
                         <h2>

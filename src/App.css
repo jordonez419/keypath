@@ -135,11 +135,13 @@ table {
   border-spacing: 0;
 }
 
+
 /* CSS Reset Above */
+
+/* Global styles below */
 
 .body {
   font-size: 10px;
-  /* background: url('https://source.unsplash.com/2JIvboGLeho/1950x1200') no-repeat center center fixed; */
 }
 
 .App {
@@ -154,7 +156,6 @@ table {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* font-size: calc(10px + 2vmin); */
   font-family: 'Cormorant SC', serif;
   font-family: 'Merriweather', serif;
   font-family: 'Modern Antiqua', cursive;
@@ -164,19 +165,27 @@ table {
   color: black;
 }
 
+li:hover {
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: auto;
+  margin-bottom: .5rem;
+  border: 2px black solid;
+  border-radius: 5px;
+  width: 75%;
+  text-align: center;
+  padding: .5rem;
+  background-color: #80ced6;
+  ;
+}
+
 .result {
   margin: auto;
 }
 
-.none {
-  display: none;
-}
-
-.section {
-  display: flex;
-  justify-content: space-around;
-  align-items: space-around;
-}
 
 .description {
   font-size: 1rem;
@@ -184,7 +193,13 @@ table {
 
 p {
   font-size: 1.2rem;
+  margin: .3rem;
 }
+
+input:hover {
+  cursor: pointer;
+}
+
 
 .item-option {
   font-size: 1rem;
@@ -208,6 +223,8 @@ p {
   justify-content: space-evenly;
 }
 
+/* Snacks */
+
 #reeses {
   width: 8rem;
   margin-top: 1.5rem;
@@ -221,23 +238,6 @@ p {
   margin-top: .5rem;
 }
 
-li:hover {
-  cursor: pointer;
-}
-
-.title {
-  font-size: 1.5rem;
-  margin: auto;
-  margin-bottom: .5rem;
-  border: 2px black solid;
-  border-radius: 5px;
-  width: 75%;
-  text-align: center;
-  padding: .5rem;
-  background-color: #80ced6;
-  ;
-}
-
 .eq-example {
   display: flex;
   flex-direction: column;
@@ -248,6 +248,8 @@ li:hover {
 .eq-item {
   margin: 1rem;
 }
+
+/* Button styles */
 
 button {
   text-align: center;
@@ -292,17 +294,16 @@ button:hover {
   color: #80ced6;
 }
 
-input:hover {
-  cursor: pointer;
+/* MISC Below */
+
+.none {
+  display: none;
 }
+
 
 .error {
   color: red;
   font-size: 1rem;
-}
-
-p {
-  margin: .3rem;
 }
 
 .graph {
@@ -319,388 +320,7 @@ p {
   margin-top: 2rem;
 }
 
-/* Transitions Below */
 
-.transition-container {
-  perspective: 800px;
-}
-
-.react-transition {
-  animation-fill-mode: both;
-}
-
-.multiple-choice {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.question {
-  margin: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-@keyframes swipeUp {
-  from {
-    transform: translate3d(0, 100vh, 0);
-    opacity: 0;
-  }
-
-  to {
-    transform: translate3d(0, 0vh, 0);
-    opacity: 1;
-  }
-}
-
-.swipe-up {
-  animation-timing-function: linear;
-  transform-origin: bottom center;
-  animation-name: swipeUp;
-  animation-duration: 250ms;
-}
-
-
-@keyframes swipeLeft {
-  from {
-    transform: translate3d(-1000px, 0, 0);
-    opacity: 0;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-.swipe-left {
-  animation-timing-function: ease-in-out;
-  transform-origin: bottom center;
-  animation-name: swipeLeft;
-  animation-duration: 300ms;
-}
-
-
-@keyframes swipeRight {
-  from {
-    transform: translate3d(1000px, 0, 0);
-    opacity: 0;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-.swipe-right {
-  animation-timing-function: ease-in-out;
-  transform-origin: bottom center;
-  animation-name: swipeRight;
-  animation-duration: 300ms;
-}
-
-
-
-@keyframes swipeDown {
-  from {
-    transform: translate3d(0, -100vh, 0);
-    opacity: 0;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-.swipe-down {
-  animation-timing-function: ease-in-out;
-  transform-origin: bottom center;
-  animation-name: swipeDown;
-  animation-duration: 300ms;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation-timing-function: ease-in-out;
-  transform-origin: bottom center;
-  animation-name: fadeIn;
-  animation-duration: 250ms;
-}
-
-
-@keyframes scaleIn {
-  from {
-    transform: translateY(-500px) scale(.01);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
-.scale-in {
-  animation-timing-function: ease-in-out;
-  transform-origin: bottom center;
-  animation-name: scaleIn;
-  animation-duration: 250ms;
-}
-
-@keyframes scaleInRight {
-  from {
-    transform: translateY(-500px) translateX(500px) scale(.01);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
-.scale-in-right {
-  animation-timing-function: ease-in-out;
-  transform-origin: bottom center;
-  animation-name: scaleInRight;
-  animation-duration: 250ms;
-}
-
-@keyframes scaleInLeft {
-  from {
-    transform: translateY(-500px) translateX(-500px) scale(.01);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
-.scale-in-left {
-  animation-timing-function: ease-in-out;
-  transform-origin: bottom center;
-  animation-name: scaleInLeft;
-  animation-duration: 250ms;
-}
-
-
-
-@keyframes dropIn {
-  from {
-    transform: scale(4) translateY(400px);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
-.drop-in {
-  animation-timing-function: ease-in-out;
-  transform-origin: bottom center;
-  animation-name: dropIn;
-  animation-duration: 250ms;
-}
-
-
-@keyframes dropInRight {
-  from {
-    transform: scale(4) translateY(400px) translateX(400px);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
-.drop-in-right {
-  animation-timing-function: ease-in-out;
-  transform-origin: bottom center;
-  animation-name: dropInRight;
-  animation-duration: 250ms;
-}
-
-
-@keyframes dropInLeft {
-  from {
-    transform: scale(4) translateY(400px) translateX(-400px);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
-.drop-in-left {
-  animation-timing-function: ease-in-out;
-  transform-origin: bottom center;
-  animation-name: dropInLeft;
-  animation-duration: 250ms;
-}
-
-
-@keyframes flipInX {
-  from {
-    transform: rotateX(90deg);
-  }
-
-  70% {
-    transform: rotateX(-10deg);
-  }
-
-  to {
-    transform: rotateX(0deg);
-  }
-}
-
-.flip-in-x {
-  animation-timing-function: linear;
-  animation-name: flipInX;
-  transform-style: preserve-3d;
-  animation-duration: 300ms;
-}
-
-@keyframes flipInXReverse {
-  from {
-    transform: rotateX(-90deg);
-  }
-
-  70% {
-    transform: rotateX(10deg);
-  }
-
-  to {
-    transform: rotateX(0deg);
-  }
-}
-
-.flip-in-x-reverse {
-  animation-timing-function: linear;
-  animation-name: flipInXReverse;
-  transform-style: preserve-3d;
-  animation-duration: 300ms;
-}
-
-
-
-@keyframes flipInY {
-  from {
-    transform: rotateY(90deg);
-  }
-
-  70% {
-    transform: rotateY(-10deg);
-  }
-
-  to {
-    transform: rotateY(0deg);
-  }
-}
-
-.flip-in-y {
-  animation-timing-function: linear;
-  animation-name: flipInY;
-  animation-duration: 300ms;
-  transform-style: preserve-3d;
-}
-
-@keyframes flipInYReverse {
-  from {
-    transform: rotateY(-90deg);
-  }
-
-  70% {
-    transform: rotateY(10deg);
-  }
-
-  to {
-    transform: rotateY(0deg);
-  }
-}
-
-.flip-in-y-reverse {
-  animation-timing-function: linear;
-  animation-name: flipInYReverse;
-  animation-duration: 300ms;
-  transform-style: preserve-3d;
-}
-
-
-@keyframes rotateIn {
-  from {
-    transform: scale(.1) rotate(180deg);
-  }
-
-  70% {
-    /*transform:  rotate(10deg);*/
-  }
-
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-.rotate-in {
-  animation-timing-function: ease-in-out;
-  animation-name: rotateIn;
-  animation-duration: 300ms;
-  transform-style: preserve-3d;
-}
-
-
-
-@keyframes rotateInReverse {
-  from {
-    transform: scale(.1) rotate(-180deg);
-  }
-
-  70% {
-    /*transform:  rotate(10deg);*/
-  }
-
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-.rotate-in-reverse {
-  animation-timing-function: ease-in-out;
-  animation-name: rotateInReverse;
-  animation-duration: 300ms;
-  transform-style: preserve-3d;
-}
-
-@keyframes woah {
-  from {
-    transform: scale(.001) translateX(200px);
-  }
-
-  25% {
-    transform: scale(.25) rotateY(180deg) translateX(100px) translateY(100px);
-  }
-
-  50% {
-    transform: scale(.5) rotateY(0deg) rotateX(180deg) translateX(-100px) translateY(600px);
-  }
-
-}
-
-.woah {
-  animation-timing-function: linear;
-  animation-name: woah;
-  animation-duration: 1s;
-  transform-style: preserve-3d;
-}
 
 /* Multiple Choice Styling Below*/
 
@@ -780,13 +400,9 @@ li:hover {
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
-.responsiveness-container-2 {
-  max-width: 25rem;
-  /* height: 42rem; */
-}
-
 
 /* Responsiveness */
+
 .widget-container {
   width: 50rem;
 }
@@ -796,14 +412,16 @@ li:hover {
   height: 42rem;
 }
 
+.responsiveness-container-2 {
+  max-width: 25rem;
+  /* height: 42rem; */
+}
+
 .responsiveness-container-3 {
   width: 50rem;
   height: 30rem;
 }
 
-/* .youtube {
-  width: 50rem;
-} */
 
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
